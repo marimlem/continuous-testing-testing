@@ -19,4 +19,4 @@ jobs:
     - name: print current dir path
       run: pwd; ls -la
     - name: checkout & print current dir path
-      run: cd ..; pwd; ls -la
+      run: git status; pwd; ls -la
