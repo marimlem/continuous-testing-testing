@@ -38,7 +38,12 @@ jobs:
         ls -la
     - name: verify java
       run: javac -version; java -version
-    - name: install java
-      run: sudo apt install -y openjdk-17-jdk openjdk-17-jre
+    # - name: install java
+    #   run: sudo apt install -y openjdk-17-jdk openjdk-17-jre
+    # - name: verify java
+    #   run: javac -version; java -version
+    - uses: actions/setup-java@v4
+      with:
+        java-version: '17'
     - name: verify java
       run: javac -version; java -version
