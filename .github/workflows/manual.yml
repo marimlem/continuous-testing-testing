@@ -48,4 +48,4 @@ jobs:
     - name: run the api tests
       run: chmod +x ./gradlew; API_EMAIL=customer@practicesoftwaretesting.com API_PASSWORD=welcome01 ./gradlew test --tests "ApiTests" --info
     - name: verify test results
-      run: ls /home/runner/work/continuous-testing-testing/continuous-testing-testing/build/test-results/test
+      run: cat /home/runner/work/continuous-testing-testing/continuous-testing-testing/build/test-results/test/TEST-school.training.ApiTests.xml
