@@ -51,6 +51,7 @@ jobs:
       env:
         API_EMAIL: ${{ secrets.API_EMAIL }}
         API_PASSWORD: ${{ secrets.API_PASSWORD }}
+        BASE_URI: ${{ vars.BASE_URI }}
       run: chmod +x ./gradlew; ./gradlew test --tests "ApiTests" --info
       # continue-on-error: true
     - name: verify test results
