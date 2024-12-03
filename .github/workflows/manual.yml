@@ -46,6 +46,6 @@ jobs:
     - name: verify java
       run: javac -version; java -version
     - name: run the api tests
-      run: chmod +x ./gradlew; ./gradlew test --tests "ApiTests" --info; cat /home/runner/work/continuous-testing-testing/continuous-testing-testing/build/test-results/test
+      run: chmod +x ./gradlew; API_EMAIL=customer@practicesoftwaretesting.com ;./gradlew test --tests "ApiTests" --info
     # - name: verify test results
     #   run: cat /home/runner/work/continuous-testing-testing/continuous-testing-testing/build/test-results/test
