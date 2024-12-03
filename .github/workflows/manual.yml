@@ -48,3 +48,5 @@ jobs:
         distribution: temurin
     - name: verify java
       run: javac -version; java -version
+    - name: run the api tests
+      run: ./gradlew test --tests "ApiTests" --info
