@@ -36,3 +36,5 @@ jobs:
       run: |
         pwd
         ls -la
+    - name: verify java
+      run: javac -version
