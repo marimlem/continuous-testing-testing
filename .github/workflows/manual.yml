@@ -45,5 +45,6 @@ jobs:
     - uses: actions/setup-java@v4
       with:
         java-version: '17'
+        distribution: temurin
     - name: verify java
       run: javac -version; java -version
