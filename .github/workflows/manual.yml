@@ -49,7 +49,7 @@ jobs:
       run: chmod +x ./gradlew; ./gradlew test --tests "ApiTests" --info
       env: # Set the secret as an input
         API_EMAIL: ${{ secrets.API_EMAIL }}
-        API_PASSWORD: ${{ secrests.API_PASSWORD }}
+        API_PASSWORD: ${{ secrets.API_PASSWORD }}
       continue-on-error: true
     - name: verify test results
       run: |
