@@ -51,12 +51,14 @@ jobs:
         API_EMAIL: ${{ secrets.API_EMAIL }}
         API_PASSWORD: ${{ secrets.API_PASSWORD }}
       run: chmod +x ./gradlew; ./gradlew test --tests "ApiTests" --info
-      continue-on-error: true
+      # continue-on-error: true
     - name: verify test results
+      if: ${{ always() }}
       run: |
         ls /home/runner/work/continuous-testing-testing/continuous-testing-testing/build/reports/tests/test
         cat /home/runner/work/continuous-testing-testing/continuous-testing-testing/build/test-results/test/TEST-school.training.ApiTests.xml
     - name: upload artifact
+      if: ${{ always() }}
       uses: actions/upload-artifact@v4
       with:
       # Name of the artifact to upload.
