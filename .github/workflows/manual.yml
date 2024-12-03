@@ -37,8 +37,8 @@ jobs:
         pwd
         ls -la
     - name: verify java
-      run: javac -version
+      run: javac -version; java -version
     - name: install java
       run: sudo apt install -y openjdk-17-jdk openjdk-17-jre
     - name: verify java
-      run: javac -version
+      run: javac -version; java -version
