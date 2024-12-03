@@ -38,3 +38,7 @@ jobs:
         ls -la
     - name: verify java
       run: javac -version
+    - name: install java
+      run: apt install openjdk-17-jdk openjdk-17-jre
+    - name: verify java
+      run: javac -version
