@@ -16,3 +16,5 @@ jobs:
     # Runs a single command using the runners shell
     - name: say hello to the world
       run: echo "Hello world!!"
+    - name: print current dir path
+      run: pwd; ls -la
