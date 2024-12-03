@@ -28,6 +28,7 @@ jobs:
         ls -la
 
   checkout-repo:
+    environment: secrets-testing-website
     runs-on: ubuntu-latest
     steps:
     - name: checkout with actions
