@@ -47,6 +47,9 @@ jobs:
       run: javac -version; java -version
     - name: run the api tests
       run: chmod +x ./gradlew; ./gradlew test --tests "ApiTests" --info
+      env: # Set the secret as an input
+        API_EMAIL: ${{ secrets.API_EMAIL }}
+        API_PASSWORD: ${{ secrests.API_PASSWORD }}
       continue-on-error: true
     - name: verify test results
       run: |
