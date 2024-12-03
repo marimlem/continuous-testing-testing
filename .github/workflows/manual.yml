@@ -20,3 +20,9 @@ jobs:
       run: |
         pwd
         ls -la
+    - name: say hello to the world
+      uses: actions/checkout@v4
+    - name: print current dir path after checkout
+      run: |
+        pwd
+        ls -la
