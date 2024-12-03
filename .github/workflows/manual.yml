@@ -46,7 +46,7 @@ jobs:
     - name: verify java
       run: javac -version; java -version
     - name: run the api tests
-      run: chmod +x ./gradlew; API_EMAIL=customer@practicesoftwaretesting.com API_PASSWORD=welcome01 ./gradlew test --tests "ApiTests" --info
+      run: chmod +x ./gradlew; API_EMAIL=wrongcustomer@practicesoftwaretesting.com API_PASSWORD=welcome01 ./gradlew test --tests "ApiTests" --info
       continue-on-error: true
     - name: verify test results
       run: |
